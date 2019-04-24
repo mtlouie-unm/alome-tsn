@@ -67,7 +67,7 @@ def main(number_examples, classInd_path, frame_path, train_file_path):
     test_file.close()
 
     # Fix Prototxts
-    fix_train_val_prototxt('/app/models/ucf101', 'tsn_bn_inception_flow_train_val.prototxt', number_examples, True)
+    #fix_train_val_prototxt('/app/models/ucf101', 'tsn_bn_inception_flow_train_val.prototxt', number_examples, True)
 
 
 if __name__ == "__main__":
