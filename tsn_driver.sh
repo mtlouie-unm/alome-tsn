@@ -25,7 +25,8 @@ do
 
     echo "Begin Testing with Test set"
     rm /app/data/ucf101_splits/ucf101_flow_val_split_1.txt
-    cp test_set.txt ucf101_flow_val_split_1.txt
+    cp /app/data/ucf101_splits/TESTING_FILE.txt testlist01.txt
+    bash /app/scripts/build_file_list.sh ucf101 /mnt/out
     python eval_net.py ucf101 1 flow /mnt/out \
      models/ucf101/tsn_bn_inception_flow_deploy.prototxt models/ucf101_split1_tsn_flow_bn_inception_iter_2000.caffemodel \
     --num_worker 1 --save_scores /app/test_scores/score_test_$i > /app/testing_logs/test_log_$i.txt
